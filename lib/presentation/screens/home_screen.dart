@@ -72,25 +72,19 @@ class _HomeShellState extends State<HomeShell> {
   // Sample movie data
   final List<Movie> movies = [
     const Movie(
-      title: 'Inception',
-      description:
-          'cdhgmhvhnm bnhmhnfbkjjhnmj, m bjmhgkhgnyrjhmnfgjj hj j ngjmhkjmhnyri jmhnyt ',
-      rating: 8.8,
-      quality: '4K',
-      genre: 'Sci-Fi',
-      year: 2010,
-      imageUrl: '',
-    ),
+        title: null,
+        description: null,
+        rating: null,
+        quality: null,
+        genre: null,
+        year: null),
     const Movie(
-      title: 'The Dark Knight',
-      description:
-          'cdhgmhvhnm bnhmhnfbkjjhnmj, m bjmhgkhgnyrjhmnfgjj hj j ngjmhkjmhnyri jmhnyt ',
-      rating: 9.0,
-      quality: 'HD',
-      genre: 'Action',
-      year: 2008,
-      imageUrl: '',
-    ),
+        title: null,
+        description: null,
+        rating: null,
+        quality: null,
+        genre: null,
+        year: null),
     // Add more movies as needed
   ];
 
