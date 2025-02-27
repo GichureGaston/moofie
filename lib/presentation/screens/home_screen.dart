@@ -72,20 +72,15 @@ class _HomeShellState extends State<HomeShell> {
   // Sample movie data
   final List<Movie> movies = [
     const Movie(
-        title: null,
-        description: null,
-        rating: null,
-        quality: null,
-        genre: null,
-        year: null),
-    const Movie(
-        title: null,
-        description: null,
-        rating: null,
-        quality: null,
-        genre: null,
-        year: null),
-    // Add more movies as needed
+      title: null,
+      imageUrl: null,
+      description: null,
+      rating: null,
+      quality: null,
+      genre: null,
+      year: null,
+      released: null,
+    ),
   ];
 
   @override
@@ -214,7 +209,7 @@ class _HomeShellState extends State<HomeShell> {
                               bottom: 8,
                               left: 8,
                               child: Text(
-                                movie.title,
+                                movie.title.toString(),
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,

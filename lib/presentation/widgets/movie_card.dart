@@ -58,7 +58,7 @@ class MovieCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            movie.title,
+            movie.title.toString(),
             style: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
@@ -83,11 +83,11 @@ class MovieCard extends StatelessWidget {
         ),
         _buildChip(
           icon: Icons.hd,
-          label: movie.quality,
+          label: movie.quality.toString(),
         ),
         _buildChip(
           icon: Icons.movie,
-          label: movie.genre,
+          label: movie.genre.toString(),
         ),
         _buildChip(
           icon: Icons.calendar_today,
@@ -154,7 +154,7 @@ class MovieCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16),
       child: Text(
-        movie.description,
+        movie.description.toString(),
         style: const TextStyle(
           fontSize: 14,
           color: Colors.grey,
@@ -174,10 +174,11 @@ class MovieCardExample extends StatelessWidget {
       title: 'Inception',
       description:
           'dgsfgdgcjhgrbjhgchvyhrghfbvhbrhgbhfgbfvbkcbfkjgbfukjgfjhbvhnvbnvbfghiughnv bgbgh',
-      rating: 8.8,
+      rating: "8",
       quality: '4K',
       genre: 'Sci-Fi',
       year: 2010,
+      released: '2024',
     );
 
     return Scaffold(
