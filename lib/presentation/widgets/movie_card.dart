@@ -41,12 +41,12 @@ class MovieCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.grey[200],
         borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
-        image: movie.imageUrl != null
-            ? DecorationImage(
-                image: NetworkImage(movie.imageUrl!),
-                fit: BoxFit.cover,
-              )
-            : null,
+        // image: movie.imageUrl != null
+        //     ? DecorationImage(
+        //         image: NetworkImage(movie.imageUrl!),
+        //         fit: BoxFit.cover,
+        //       )
+        //     : null,
       ),
     );
   }
@@ -58,7 +58,7 @@ class MovieCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            movie.title.toString(),
+            movie.name.toString(),
             style: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
@@ -78,20 +78,20 @@ class MovieCard extends StatelessWidget {
       children: [
         _buildChip(
           icon: Icons.star,
-          label: '${movie.rating}',
+          label: '${movie.iso6391}',
           backgroundColor: Colors.amber,
         ),
         _buildChip(
           icon: Icons.hd,
-          label: movie.quality.toString(),
+          label: movie.id.toString(),
         ),
         _buildChip(
           icon: Icons.movie,
-          label: movie.genre.toString(),
+          label: movie.iso6391.toString(),
         ),
         _buildChip(
           icon: Icons.calendar_today,
-          label: movie.year.toString(),
+          label: movie.favoriteCount.toString(),
         ),
       ],
     );
@@ -166,21 +166,11 @@ class MovieCard extends StatelessWidget {
 
 // Example usage
 class MovieCardExample extends StatelessWidget {
-  const MovieCardExample({super.key});
+  const MovieCardExample({super.key, required this.movie});
+  final Movie movie;
 
   @override
   Widget build(BuildContext context) {
-    const movie = Movie(
-      title: 'Inception',
-      description:
-          'dgsfgdgcjhgrbjhgchvyhrghfbvhbrhgbhfgbfvbkcbfkjgbfukjgfjhbvhnvbnvbfghiughnv bgbgh',
-      rating: "8",
-      quality: '4K',
-      genre: 'Sci-Fi',
-      year: 2010,
-      released: '2024',
-    );
-
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(16),
